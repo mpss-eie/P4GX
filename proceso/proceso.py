@@ -11,4 +11,4 @@ def grafica():
 
 
 def probabilidad():
-    return 'Aquí está la probabilidad.'
+    return 'Aquí está la probabilidad de ocurrencia.'

@@ -97,7 +97,7 @@ donde mostrará la información del paquete, o bien `pip list`, donde está la l
 Ahora el paquete `proceso` está disponible para ser utilizado localmente en cualquier programa de Python, importando sus módulos, por ejemplo:
 
 ```python
-from proceso import proceso, momentos, estacionaridad, espectro
+from proceso import proceso, momentos, estacionaridad
 
 proceso.densidad()
 ...
@@ -108,10 +108,9 @@ proceso.densidad()
 - **Funcionalidad**: la revisión de la funcionalidad debe estar en el archivo `revision.py`. Este archivo es una demostración del proyecto y debe ser editado por el grupo para mostrar los resultados apropiados según el desarrollo de cada función y las decisiones tomadas en cuanto a sus argumentos de entrada. En la versión provista de ejemplo, `revision.py` solamente imprime una frase que indica que viene de una función particular. 
 - **PEP-8**: la revisión será hecha con:
 ```bash
-$ pycodestyle --ignore=E226 proceso/proceso.py
-$ pycodestyle --ignore=E226 proceso/momentos.py
-$ pycodestyle --ignore=E226 proceso/estacionaridad.py
-$ pycodestyle --ignore=E226 proceso/espectro.py
+$ pycodestyle proceso/proceso.py
+$ pycodestyle proceso/momentos.py
+$ pycodestyle proceso/estacionaridad.py
 ```
 Los códigos de error de `pycodestyle` están disponibles en su [documentación](https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes).
 - **PEP-257** (*docstrings*): la revisión será hecha con:
@@ -119,7 +118,6 @@ Los códigos de error de `pycodestyle` están disponibles en su [documentación]
 $ pydocstyle proceso/proceso.py
 $ pydocstyle proceso/momentos.py
 $ pydocstyle proceso/estacionaridad.py
-$ pydocstyle proceso/espectro.py
 ```
 Los códigos de error de `pydocstyle` están disponibles en su [documentación](https://www.pydocstyle.org/en/stable/error_codes.html).
 

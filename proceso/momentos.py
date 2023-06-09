@@ -1,5 +1,6 @@
 def autocorrelacion():
-    return 'Aquí está la autocorrelación.'
+    return "Aquí está la autocorrelación."
+
 
 def autocovarianza():
-    return 'Aquí está la autocovarianza.'
+    return "Aquí está la autocovarianza."

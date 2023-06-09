@@ -58,7 +58,7 @@ $ pip install wheel
 
 > Ejecutar en la interfaz de línea de comandos de su computadora, en el mismo directorio donde está el repositorio local del proyecto.
 
-**Nota**: puede navegar los directorios de su computadora con el comando `cd` (*change directory*). Ejemplo: `$ cd /Users/maria/Documentos/MPSS/Proyecto4/P4G17` (cambia según el sistema operativo).
+**Nota**: puede navegar los directorios de su computadora con el comando `cd` (*change directory*) o `dir`. Ejemplo: `$ cd /Users/maria/Documentos/MPSS/Proyecto4/P4G17` (cambia según el sistema operativo).
 
 1. Creación de los archivos WHL (Wheel): 
 
@@ -74,7 +74,7 @@ Esto creará varios directorios nuevos: `build`, `dist` y `proceso.egg-info`, co
 $ pip install /ubicacion/del/directorio/del/proyecto
 ```
 
-**Nota**: puede encontrar `/ubicacion/del/directorio/del/proyecto` con el comando `pwd` (*print working directory*). O bien, si ya está en ese directorio, basta con hacer:
+**Nota**: puede encontrar `/ubicacion/del/directorio/del/proyecto` con el comando `pwd` (*print working directory*). O bien, si ya está en ese directorio (donde está `setup.py`), basta con hacer:
 
 ```bash
 $ pip install .
@@ -89,8 +89,10 @@ Successfully installed proceso-0.0.1
 3. Verificación de la instalación
 
 ```bash
-$ pip list
+$ pip show proceso
 ```
+
+donde mostrará la información del paquete, o bien `pip list`, donde está la lista de todos los paquetes instalados y su versión.
 
 Ahora el paquete `proceso` está disponible para ser utilizado localmente en cualquier programa de Python, importando sus módulos, por ejemplo:
 
@@ -111,15 +113,15 @@ $ pycodestyle --ignore=E226 proceso/momentos.py
 $ pycodestyle --ignore=E226 proceso/estacionaridad.py
 $ pycodestyle --ignore=E226 proceso/espectro.py
 ```
-Los códigos de error de `pycodestyle` están disponibles [aquí](https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes).
-- **Docstrings**: la revisión será hecha con:
+Los códigos de error de `pycodestyle` están disponibles en su [documentación](https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes).
+- **PEP-257** (*docstrings*): la revisión será hecha con:
 ```bash
 $ pydocstyle proceso/proceso.py
 $ pydocstyle proceso/momentos.py
 $ pydocstyle proceso/estacionaridad.py
 $ pydocstyle proceso/espectro.py
 ```
-Los códigos de error de `pydocstyle` están disponibles [aquí](https://www.pydocstyle.org/en/stable/error_codes.html).
+Los códigos de error de `pydocstyle` están disponibles en su [documentación](https://www.pydocstyle.org/en/stable/error_codes.html).
 
 Por favor hacer esta revisión antes y corregir todos los errores de formato que ahí se indican.
 

@@ -1,21 +1,23 @@
-from proceso import proceso, momentos, estacionaridad, espectro
+from proceso import proceso, momentos, estacionaridad
+import pandas as pd
 
 # SECCIÓN A: Función de densidad de probabilidad
 
-# 0. Datos de demanda de potencia
-A0 = proceso.demanda()
-print(A0)
+# 0. Lectura de datos
+df = pd.read_csv('seoul.csv')
+df['dt'] = pd.to_datetime(df['dt'], format='%Y%m%d%H')
+df.set_index(['dt', 'loc'], inplace=True)
 
-# 1. Función de densidad del proceso aleatorio
-A1 = proceso.densidad()
+# 1. Obtención de la muestra
+A1 = proceso.muestra()
 print(A1)
 
-# 2. Gráfica de la secuencia aleatoria
-A2 = proceso.grafica()
+# 2. Obtención del proceso
+A2 = proceso.proceso()
 print(A2)
 
-# 3. Probabilidad de tener un consumo p1 < P < p2 en t1 < T < t2
-A3 = proceso.probabilidad()
+# 3. Gráfica de las funciones muestra
+A3 = proceso.grafica()
 print(A3)
 
 # SECCIÓN B: Momentos
@@ -41,9 +43,3 @@ print(C7)
 # 8. Ergodicidad
 C8 = estacionaridad.ergodicidad()
 print(C8)
-
-# SECCIÓN D: Características espectrales 
-
-# 9. Función de densidad espectral de potencia
-D9 = espectro.psd()
-print(D9)

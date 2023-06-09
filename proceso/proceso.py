@@ -1,11 +1,10 @@
-def demanda():
-    return 'Aquí están los datos.'
+def muestra():
+    return "Aquí está la función muestra."
 
-def densidad():
-    return 'Aquí está la densidad de probabilidad.'
+
+def proceso():
+    return "Aquí está el proceso."
+
 
 def grafica():
-    return 'Aquí está la gráfica.'
-
-def probabilidad():
-    return 'Aquí está la probabilidad.'
+    return "Aquí está la gráfica."

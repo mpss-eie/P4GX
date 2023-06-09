@@ -7,4 +7,4 @@ def proceso():
 
 
 def grafica():
-    return "Aquí está la gráfica."
+    return "Aquí está la gráfica del proceso."

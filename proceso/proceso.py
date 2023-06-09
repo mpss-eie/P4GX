@@ -3,7 +3,7 @@ def muestra():
 
 
 def proceso():
-    return "Aquí está el proceso."
+    return "Aquí está el proceso, es decir, el conjunto de muestras."
 
 
 def grafica():
